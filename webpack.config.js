@@ -1,4 +1,3 @@
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 /** @type import("webpack").Configuration */
@@ -33,15 +32,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/images/favicon.svg",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "assets",
-          to: "assets",
-        },
-      ],
+      favicon: "./src/favicon.svg",
     }),
   ],
 };
